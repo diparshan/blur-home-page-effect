@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  background-color: #202020;
+  color: white;
+}
+
+/*home page*/
+.home {
+  display: flex;
+  background: url(../images/bg1.jpg) no-repeat center/cover;
+  height: 100vh;
+}
+.home .content {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+.home .content h1 {
+  padding: 40px 0 10px 0;
+}
+
+/*offers section*/
+.offers {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+  height: 300px;
+  padding: 50px 30px;
+}
+
+.offers div h3 {
+  margin: 20px 0 5px 0;
+}
+
+/*about us section*/
+.about-us {
+  display: flex;
+  background: white;
+  color: #202020;
+  padding: 40px;
+  height: 300px;
+  align-items: center;
+}
+
+.icon {
+  flex: 1;
+  text-align: center;
+}
+
+.about {
+  flex: 1;
+}
+
+.about h1 {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.about p {
+  text-align: justify;
+}
+
+/*footer section*/
+.footer {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
