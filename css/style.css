@@ -11,15 +11,28 @@ body {
 }
 
 /*home page*/
-.home {
-  display: flex;
+.home::after {
+  content: "";
   background: url(../images/bg1.jpg) no-repeat center/cover;
   height: 100vh;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  transition: all 1s;
+  display: block;
 }
+.home:hover::after {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
 .home .content {
+  position: absolute;
   width: 40%;
   margin: auto;
   text-align: center;
+  z-index: 1;
+  top: 30%;
+  left: 30%;
 }
 
 .home .content h1 {
@@ -35,6 +48,8 @@ body {
   text-align: center;
   height: 300px;
   padding: 50px 30px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .offers div h3 {
@@ -49,6 +64,8 @@ body {
   padding: 40px;
   height: 300px;
   align-items: center;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .icon {
@@ -76,4 +93,51 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+@media (max-width: 560px) {
+  .home::after {
+    height: 500px;
+    filter: blur(10px);
+  }
+  .home .content {
+    top: 2%;
+    width: 80%;
+    left: 5%;
+    margin-left: 25px;
+  }
+  .home .content p {
+    display: none;
+  }
+  .home .content img {
+    margin-top: 40px;
+  }
+  .home .content h1 {
+    padding-top: 20px;
+  }
+
+  .offers {
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 80%;
+    margin: auto;
+  }
+
+  .about-us {
+    flex-direction: column;
+    height: auto;
+  }
+  .about-us .icon {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-height: 500px) {
+  .home .content h1,
+  .home .content p {
+    display: none;
+  }
+  .home::after {
+    height: 100vh;
+  }
 }
