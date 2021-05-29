@@ -1,0 +1,1 @@
+# blur-home-page-effect
